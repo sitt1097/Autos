@@ -11,6 +11,9 @@ import {
 import { RoleValidator } from '@auth/helpers/roleValidator';
 
 @Injectable({ providedIn: 'root' })
+
+
+
 export class AuthService extends RoleValidator {
   public user$: Observable<User>;
 
@@ -83,7 +86,6 @@ export class AuthService extends RoleValidator {
       console.log(error);
     }
   }
-
   private updateUserData(user: User) {
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(
       `users/${user.uid}`

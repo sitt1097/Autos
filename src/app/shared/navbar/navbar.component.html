@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="\">Alquiler</a>
+  <a class="navbar-brand" href="\">Rentalo</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -20,6 +20,9 @@
     
       <li class="nav-item active" *ngIf="user$ | async as user">
         <a class="nav-link" routerLink="/carros">Listas de Automovil</a>
+      </li>
+      <li class="nav-item active" *ngIf="user$ | async as user">
+        <a class="nav-link" routerLink="/regis">Rentar</a>
       </li>
     </ul>
     <ul class="navbar-nav mx-auto" *ngIf="user$ | async as user; else login">

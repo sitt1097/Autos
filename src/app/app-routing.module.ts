@@ -64,6 +64,8 @@ const routes: Routes = [
     canActivate: [CanAdminGuard],
   },
   { path: 'carros', loadChildren: () => import('./carros/carros.module').then(m => m.CarrosModule) },
+  { path: 'regis', loadChildren: () => import('./regis/regis.module').then(m => m.RegisModule) },
+  
 ];
 
 @NgModule({
